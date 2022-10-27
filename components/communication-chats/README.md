@@ -1,0 +1,73 @@
+# Chat Component
+- easy integration with different modules like Socket module and Notification module
+- ability of running the component as standalone service
+- ability of send batch messages (batch) "auto messaging" 
+- ability of integration with cron-job and send at specific time
+- capability of support group chats and private chats , reply and seen option
+
+
+## component Structure - important !
+- default port is 3000
+- Swagger for check APIs http://localhost:3000/api
+- Add response sample per API added on swagger 
+- Overview of structure: 
+
+![Structures overview](assets/read-md-chat.png)
+
+## Description
+- chat service contains message and chat domains that are the core of functionality
+![Database design overview](assets/chat-RDBMS-diagram.png)
+## Installation
+
+Use the package manager [YARN](https://yarnpkg.com/cli/node) to install dependencies.
+
+## Getting started
+- if you only need  small code-blocks and INTERNAL components, its up to you about configuration
+- don't forget to import common module in every component that you used  
+
+- Note: this project will not run in production, 
+only purpose of run project is test in local and dev env 
+
+
+- do not forget to run the migrations!
+
+```bash
+# run migrations to create tables
+npm run migration:up
+
+# for easy run project 
+ yarn start:dev
+
+```
+
+## Usage
+- Please read structure and how to use section before this part,
+ Its really important to know in details about gadget 
+- Based on your requirements need to find your target external or internal component
+- In some cases based on your needs you can combine several internal components together and use them as new custom component
+- you can create new merge-request if you made reusable external-component that other devs on s-pro can use it in future!
+- its up to you to set envs based on requirements, 
+- some tools need configuration in main.ts and root of project in nest.js , this part will not be covered in gadget
+
+## Contributing
+
+- All of node.js expertise can contribute by:
+
+- Prepare merge request for bug fixes
+- Rich gadget repositories and add more features
+- Report issues and bugs , we will fix them as soon as possible
+- Request for new features that you need
+
+- For contribution on code you need to prepare merge request to develop and mention on of 
+Core members of project
+All new end-points should be covered by tests (unit, e2e)
+Documents for both new internal and external components should be provided
+Please follow clean-code rules during contribution
+## Authors and acknowledgment
+
+- Great thanks from S-pro node.js finTech development team for support this project
+
+## Project status
+
+- Gadget is under develop! we need to develop more pre-builded components as much as possible
+this will help to increase quality of projects and facilitate development  
